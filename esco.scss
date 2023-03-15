@@ -1,12 +1,28 @@
 $netocentre: #24b2f3;
 $touraine: #C60440;
 $agricol: #2d8c17;
+$headerSize : 38px;
+$footerSize : 88px;
 
 body{
   background : #f3f3f3 !important;
   height : auto;
   overflow : auto;
 }
+
+#esco-header, #esco-footer{
+  flex:1 100%;
+  width:100%;
+}
+
+#esco-header{
+  height: $headerSize;
+}
+
+#esco-footer{
+  height: $footerSize;
+}
+
 .popover-header{
   padding: 0 10px;
   color: #fff;
@@ -21,12 +37,12 @@ body{
     opacity: .6;
     margin-top: -3px;
   }
-}
+} 
 @media screen and (min-width: 481px) {
   #layout {
     flex-flow: row wrap;
     & > .sidebar, & > .list, & > .content{
-      height : calc(100% - 40px);
+      height : calc(100% - 40px - $headerSize - $footerSize);
     }
     & > .menu {
       display: flex;
