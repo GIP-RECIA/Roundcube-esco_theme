@@ -10,19 +10,26 @@ body{
   overflow : auto;
 }
 
-#esco-header, #esco-footer{
-  flex:1 100%;
-  width:100%;
-}
+#layout{
+  #esco-header, #esco-footer{
+    flex:1 100%;
+    width:100%;
+  }
+  
+  #esco-header{
+    height: $headerSize;
+  }
+  
+  #esco-footer{
+    height: $footerSize;
+  }
 
-#esco-header{
-  height: $headerSize;
-}
-
-#esco-footer{
-  height: $footerSize;
-}
-
+  &.in-iframe{
+    #esco-header, #esco-footer{
+      display:none;
+    }
+  }
+} 
 .popover-header{
   padding: 0 10px;
   color: #fff;
@@ -43,6 +50,11 @@ body{
     flex-flow: row wrap;
     & > .sidebar, & > .list, & > .content{
       height : calc(100% - 40px - $headerSize - $footerSize);
+    }
+    &.in-iframe{
+      & > .sidebar, & > .list, & > .content{
+        height : calc(100% - 40px);
+      }
     }
     & > .menu {
       display: flex;

@@ -4,17 +4,18 @@ body {
   overflow: auto;
 }
 
-#esco-header, #esco-footer {
+#layout #esco-header, #layout #esco-footer {
   flex: 1 100%;
   width: 100%;
 }
-
-#esco-header {
+#layout #esco-header {
   height: 38px;
 }
-
-#esco-footer {
+#layout #esco-footer {
   height: 88px;
+}
+#layout.in-iframe #esco-header, #layout.in-iframe #esco-footer {
+  display: none;
 }
 
 .popover-header {
@@ -39,6 +40,9 @@ body {
   }
   #layout > .sidebar, #layout > .list, #layout > .content {
     height: calc(100% - 40px - 38px - 88px);
+  }
+  #layout.in-iframe > .sidebar, #layout.in-iframe > .list, #layout.in-iframe > .content {
+    height: calc(100% - 40px);
   }
   #layout > .menu {
     display: flex;
