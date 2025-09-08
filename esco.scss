@@ -8,90 +8,115 @@ body {
   background: #f3f3f3 !important;
   height: auto;
   overflow: auto;
-}
 
-#layout {
-  #esco-header,
-  #esco-footer {
-    flex: 1 100%;
-    width: 100%;
-  }
-
-  #esco-header {
-    height: $headerSize;
-  }
-
-  #esco-footer {
-    height: $footerSize;
-  }
-
-  &.in-iframe {
-    #esco-header,
-    #esco-footer {
-      display: none;
+  > #layout {
+    > #esco-header,
+    > #esco-footer {
+      flex: 1 100%;
+      width: 100%;
     }
-  }
-}
 
-.popover-header {
-  padding: 0 10px;
-  color: #fff;
-  font-family: inherit;
-  line-height: 40px;
-  font-size: 16px;
-  height: auto;
+    > #esco-header {
+      height: $headerSize;
+    }
 
-  img {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-    opacity: .6;
-    margin-top: -3px;
-  }
-} 
-
-@media screen and (min-width: 481px) {
-  #layout {
-    flex-flow: row wrap;
-
-    > .sidebar,
-    > .list,
-    > .content {
-      height: calc(100% - 40px - $headerSize - $footerSize);
+    > #esco-footer {
+      height: $footerSize;
     }
 
     &.in-iframe {
-      > .sidebar,
-      > .list,
-      > .content {
-        height: calc(100% - 40px);
-      }
-    }
-
-    & > .menu {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: right;
-      width: 100% !important;
-      background-color: #FFF !important;
-      padding: 0 30px;
-
-      .popover-header {
-        display: none !important;
-        background-color: transparent !important;
+      > #esco-header,
+      > #esco-footer {
+        display: none;
       }
     }
   }
 
-  #taskmenu {
-    background: #ffffff;
-    border-radius: 4px;
-    display: flex;
-    flex-flow: row wrap;
+  .popover-header {
+    padding: 0 10px;
+    color: #fff;
+    font-family: inherit;
+    line-height: 40px;
+    font-size: 16px;
+    height: auto;
 
-    .action-buttons {
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+      opacity: .6;
+      margin-top: -3px;
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    height: 100%;
+    overflow: hidden;
+
+    > #layout {
+      flex-flow: row wrap;
+
+      > div > .header {
+        background-color: #FFF;
+        border-top: 1px solid #d4dbde;
+      }
+
+      > .sidebar,
+      > .list,
+      > .content {
+        height: calc(100% - 40px - $headerSize - $footerSize);
+      }
+
+      &.in-iframe {
+        > .sidebar,
+        > .list,
+        > .content {
+          height: calc(100% - 40px);
+        }
+      }
+
+      > .menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: right;
+        width: 100% !important;
+        background-color: #FFF !important;
+        padding: 0 30px;
+  
+        .popover-header {
+          display: none !important;
+          background-color: transparent !important;
+        }
+      }
+    }
+
+    #taskmenu {
+      background: #ffffff;
+      border-radius: 4px;
+      display: flex;
+      flex-flow: row wrap;
+
+      .action-buttons {
+        a {
+          color: #333;
+
+          &:hover {
+            color: #333 !important;
+            background-color: #A9A9A9 !important;
+          }
+
+          &.selected {
+            color: #333;
+            background-color: #d4d4d4 !important;
+          }
+        }
+      }
+
       a {
         color: #333;
+        width: auto;
+        padding: .5rem .8rem;
+        height: auto;
 
         &:hover {
           color: #333 !important;
@@ -102,47 +127,20 @@ body {
           color: #333;
           background-color: #d4d4d4 !important;
         }
+
+        &::before {
+          width: auto;
+          display: inline-block;
+        }
+
+        span.inner {
+          padding-left: 8px;
+        }
       }
     }
 
-    a {
-      color: #333;
-      width: auto;
-      padding: .5rem .8rem;
-      height: auto;
-
-      &:hover {
-        color: #333 !important;
-        background-color: #A9A9A9 !important;
-      }
-
-      &.selected {
-        color: #333;
-        background-color: #d4d4d4 !important;
-      }
-
-      &::before {
-        width: auto;
-        display: inline-block;
-      }
-
-      span.inner {
-        padding-left: 8px;
-      }
+    .floating-action-buttons {
+      display: none !important;
     }
-  }
-
-  body {
-    height: 100%;
-    overflow: hidden;
-
-    > #layout > div > .header {
-      background-color: #FFF;
-      border-top: 1px solid #d4dbde;
-    }
-  }
-
-  .floating-action-buttons {
-    display: none !important;
   }
 }
