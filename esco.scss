@@ -6,6 +6,7 @@ $headerSize: 68px;
 body {
   margin-top: var(--recia-header-height, $headerSize);
   height: calc(100% - var(--recia-header-height, $headerSize));
+  --recia-font-size-base: 16px;
 
   > #layout > #esco-footer {
     display: none;
