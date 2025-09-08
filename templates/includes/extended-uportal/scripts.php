@@ -7,8 +7,8 @@ $(()=>{
   }else{
     const date = new Date();
     const cacheBuster = `${date.getFullYear()}${date.getMonth()+1}${date.getDate()}`;
-    $("<script>").attr("type","text/javascript").attr("src","/commun/extended-uportal-header.min.js?c="+cacheBuster).appendTo("body");
-    $("<script>").attr("type","text/javascript").attr("src","/commun/extended-uportal-footer.min.js?c="+cacheBuster).appendTo("body");
+    $("<script>").attr("type","text/javascript").attr("src","/resource-server/webjars/gip-recia__ui-webcomponents/dist/r-header.js?c="+cacheBuster).appendTo("body");
+    $("<script>").attr("type","text/javascript").attr("src","/resource-server/webjars/gip-recia__ui-webcomponents/dist/r-footer.js?c="+cacheBuster).appendTo("body");
   }
 });
 </script>
