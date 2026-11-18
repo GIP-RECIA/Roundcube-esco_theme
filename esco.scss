@@ -22,10 +22,6 @@ body {
       }
     }
 
-    // elastic (1.7.5) uses dedicated #layout-* ids as flex children of
-    // #layout, not .sidebar/.list/.content/.menu classes nested under it -
-    // these used to be "> .sidebar" etc. inside the "> #layout {}" block
-    // above, which silently matched nothing once elastic's markup changed.
     #layout-sidebar,
     #layout-list,
     #layout-content {
@@ -70,9 +66,12 @@ body {
         a {
           color: #333;
           width: auto;
+          box-sizing: content-box;
           padding: .5rem .8rem;
           height: auto;
           margin: 0;
+          min-width: auto;
+          max-width: none;
 
           &:hover {
             color: #333 !important;
@@ -90,6 +89,7 @@ body {
           }
 
           span.inner {
+            box-sizing: content-box;
             padding-left: 8px;
           }
         }
