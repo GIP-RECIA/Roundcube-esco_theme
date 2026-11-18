@@ -14,12 +14,12 @@ body > #layout > #esco-footer {
     background-color: #FFF;
     border-top: 1px solid #d4dbde;
   }
-  body > #layout > .sidebar,
-  body > #layout > .list,
-  body > #layout > .content {
+  body #layout-sidebar,
+  body #layout-list,
+  body #layout-content {
     height: calc(100% - 40px);
   }
-  body > #layout > .menu {
+  body #layout-menu {
     display: flex;
     flex-flow: row wrap;
     justify-content: right;
@@ -28,46 +28,46 @@ body > #layout > #esco-footer {
     padding: 0 30px;
     height: 40px;
   }
-  body > #layout > .menu > .popover-header {
+  body #layout-menu > .popover-header {
     display: none !important;
     background-color: transparent !important;
   }
-  body > #layout > .menu > #taskmenu {
+  body #layout-menu > #taskmenu {
     background: #ffffff;
     display: flex;
     flex-flow: row wrap;
   }
-  body > #layout > .menu > #taskmenu .action-buttons a {
+  body #layout-menu > #taskmenu .action-buttons a {
     color: #333;
   }
-  body > #layout > .menu > #taskmenu .action-buttons a:hover {
+  body #layout-menu > #taskmenu .action-buttons a:hover {
     color: #333 !important;
     background-color: #ececec !important;
   }
-  body > #layout > .menu > #taskmenu .action-buttons a.selected {
+  body #layout-menu > #taskmenu .action-buttons a.selected {
     color: #333;
     background-color: #d4d4d4 !important;
   }
-  body > #layout > .menu > #taskmenu a {
+  body #layout-menu > #taskmenu a {
     color: #333;
     width: auto;
     padding: 0.5rem 0.8rem;
     height: auto;
     margin: 0;
   }
-  body > #layout > .menu > #taskmenu a:hover {
+  body #layout-menu > #taskmenu a:hover {
     color: #333 !important;
     background-color: #ececec !important;
   }
-  body > #layout > .menu > #taskmenu a.selected {
+  body #layout-menu > #taskmenu a.selected {
     color: #333;
     background-color: #d4d4d4 !important;
   }
-  body > #layout > .menu > #taskmenu a::before {
+  body #layout-menu > #taskmenu a::before {
     width: auto;
     display: inline-block;
   }
-  body > #layout > .menu > #taskmenu a span.inner {
+  body #layout-menu > #taskmenu a span.inner {
     padding-left: 8px;
   }
   body .floating-action-buttons {
