@@ -111,6 +111,7 @@ body {
         bottom: 0;
         right: 0;
         left: 0;
+        z-index: 2;
         transition: transform .2s;
 
         &:hover {

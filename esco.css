@@ -84,6 +84,7 @@ body > #layout > #esco-footer {
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 2;
     transition: transform 0.2s;
   }
   body > #layout > #esco-footer:hover {
