@@ -149,15 +149,93 @@ body {
   }
 }
 
+.btn-link {
+  color: var(--recia-primary, #37beff);
+
+  &:hover {
+    color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
+  }
+}
+
+div.tox.focused {
+  border-color: var(--recia-primary, #37beff) !important;
+  box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary, #37beff) 25%, transparent) !important;
+}
+
+.message-htmlpart a,
+.message-part a {
+  color: var(--recia-system-blue, #005099);
+
+  &:hover {
+    color: color-mix(in srgb, var(--recia-system-blue, #005099) 85%, black);
+  }
+}
+
+#message-header a {
+  color: var(--recia-primary, #00acff);
+
+  &:hover {
+    color: color-mix(in srgb, var(--recia-primary, #00acff) 90%, black);
+  }
+}
+
+.form-control:focus,
+.input-group-text input:focus,
+.custom-file-input:focus ~ .custom-file-label,
+.recipient-input.focus,
+.multi-input > .content.focused,
+.tagedit-list[tabindex="-1"] {
+  border-color: var(--recia-primary, #37beff) !important;
+  box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary, #37beff) 25%, transparent) !important;
+}
+
+html:not(.touch) .listing li > a:focus,
+html:not(.touch) .listing.focus tbody tr.focused > td:first-child,
+html:not(.touch) .listing.focus:not(.withselection) tbody tr.focused > td.selection + td {
+  border-left: 2px solid color-mix(in srgb, var(--recia-primary, #37beff) 60%, white) !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary, #37beff) 25%, transparent) !important;
+}
+
+.custom-switch .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: var(--recia-primary, #37beff) !important;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: var(--recia-primary, #37beff) !important;
+}
+
+.ui-menu .ui-state-active,
+.popover .menu li a:not(.disabled):hover,
+.popover .menu .dropbutton a.dropdown:hover,
+.popupmenu .listing li > a:not(.disabled):hover,
+.popupmenu .listing li.selected {
+  background-color: var(--recia-primary, #37beff) !important;
+}
+
+.ui-datepicker .ui-state-highlight,
+.ui-datepicker.ui-widget-content .ui-state-highlight {
+  color: var(--recia-primary, #37beff) !important;
+}
+
+.ui-datepicker a.ui-state-active {
+  background-color: var(--recia-primary, #37beff) !important;
+}
+
 #messagestack .alert-info.information,
 .folderlist li.mailbox .unreadcount,
 .quota-widget .value {
   background-color: var(--recia-primary, #37beff) !important;
 }
 
-.folderlist li.selected > a,
-.folderlist li.selected > div > a {
-  background-color: color-mix(in srgb, var(--recia-primary, #37beff) 10%, white);
+.listing li.selected,
+.listing li.selected > a,
+.listing li.selected > div > a,
+.listing tr.selected td {
+  background-color: color-mix(in srgb, var(--recia-primary, #37beff) 10%, white) !important;
 }
 
 html.dark-mode {
@@ -179,10 +257,37 @@ html.dark-mode {
     }
   }
 
-  .folderlist li.selected,
-  .folderlist li.selected > a,
-  .folderlist li.selected > div > a {
+  .listing li.selected,
+  .listing li.selected > a,
+  .listing li.selected > div > a,
+  .listing tr.selected td {
+    color: var(--recia-primary-dark, #37beff) !important;
+  }
+
+  .messagelist tr:not(.flagged):not(.deleted).selected td.subject a,
+  .messagelist tr:not(.flagged):not(.deleted).selected td.subject span.msgicon.status {
+    color: var(--recia-primary-dark, #37beff) !important;
+  }
+
+  .btn-link {
     color: var(--recia-primary-dark, #37beff);
+
+    &:hover {
+      color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, white);
+    }
+  }
+
+  div.tox.focused {
+    border-color: var(--recia-primary-dark, #37beff) !important;
+    box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary-dark, #37beff) 25%, transparent) !important;
+  }
+
+  #message-header a {
+    color: var(--recia-primary-dark, #00acff);
+
+    &:hover {
+      color: color-mix(in srgb, var(--recia-primary-dark, #00acff) 90%, white);
+    }
   }
 
   @media screen and (min-width: 481px) {
