@@ -155,6 +155,11 @@ body {
   background-color: var(--recia-primary, #37beff) !important;
 }
 
+.folderlist li.selected > a,
+.folderlist li.selected > div > a {
+  background-color: color-mix(in srgb, var(--recia-primary, #37beff) 10%, white);
+}
+
 html.dark-mode {
   .btn-primary:not(.btn-danger) {
     background-color: var(--recia-btn-primary-bg-dark, #fff);
@@ -172,6 +177,12 @@ html.dark-mode {
     &:focus {
       box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-btn-primary-pressed-dark, #8ac7ff) 50%, transparent) !important;
     }
+  }
+
+  .folderlist li.selected,
+  .folderlist li.selected > a,
+  .folderlist li.selected > div > a {
+    color: var(--recia-primary-dark, #37beff);
   }
 
   @media screen and (min-width: 481px) {
