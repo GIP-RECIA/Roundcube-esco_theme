@@ -141,6 +141,10 @@ body {
     background-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
     border-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
   }
+
+  &:focus {
+    box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary, #37beff) 50%, transparent) !important;
+  }
 }
 
 #messagestack .alert-info.information,
@@ -159,6 +163,10 @@ html.dark-mode {
     &:active {
       background-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
       border-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary-dark, #37beff) 50%, transparent) !important;
     }
   }
 

@@ -107,6 +107,9 @@ body > #layout > #esco-footer {
   background-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
   border-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
 }
+.btn-primary:not(.btn-danger):focus {
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--recia-primary, #37beff) 50%, transparent) !important;
+}
 
 #messagestack .alert-info.information,
 .folderlist li.mailbox .unreadcount,
@@ -121,6 +124,9 @@ html.dark-mode .btn-primary:not(.btn-danger) {
 html.dark-mode .btn-primary:not(.btn-danger):hover, html.dark-mode .btn-primary:not(.btn-danger):focus, html.dark-mode .btn-primary:not(.btn-danger):active {
   background-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
   border-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+}
+html.dark-mode .btn-primary:not(.btn-danger):focus {
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--recia-primary-dark, #37beff) 50%, transparent) !important;
 }
 @media screen and (min-width: 481px) {
   html.dark-mode body > #layout > div > .header {
