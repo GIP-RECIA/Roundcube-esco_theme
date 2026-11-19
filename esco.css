@@ -46,7 +46,7 @@ body > #layout > #esco-footer {
   }
   body #layout-menu > #taskmenu .action-buttons a.selected {
     color: #333;
-    background-color: #d4d4d4 !important;
+    background-color: var(--recia-primary-light, #d4d4d4) !important;
   }
   body #layout-menu > #taskmenu a {
     color: #333;
@@ -96,6 +96,56 @@ body > #layout > #esco-footer {
   }
   body > #layout:hover > #esco-footer {
     transform: translateY(calc(100% - 10px));
+  }
+}
+
+.btn-primary:not(.btn-danger) {
+  background-color: var(--recia-primary, #37beff);
+  border-color: var(--recia-primary, #37beff);
+}
+.btn-primary:not(.btn-danger):hover, .btn-primary:not(.btn-danger):focus, .btn-primary:not(.btn-danger):active {
+  background-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
+  border-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
+}
+
+#messagestack .alert-info.information,
+.folderlist li.mailbox .unreadcount,
+.quota-widget .value {
+  background-color: var(--recia-primary, #37beff) !important;
+}
+
+html.dark-mode .btn-primary:not(.btn-danger) {
+  background-color: var(--recia-primary-dark, #37beff);
+  border-color: var(--recia-primary-dark, #37beff);
+}
+html.dark-mode .btn-primary:not(.btn-danger):hover, html.dark-mode .btn-primary:not(.btn-danger):focus, html.dark-mode .btn-primary:not(.btn-danger):active {
+  background-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+  border-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+}
+@media screen and (min-width: 481px) {
+  html.dark-mode body > #layout > div > .header {
+    background-color: #21292c;
+    border-top: 1px solid #4d6066;
+  }
+  html.dark-mode body #layout-menu {
+    background-color: #21292c !important;
+  }
+  html.dark-mode body #layout-menu > #taskmenu {
+    background: #21292c;
+  }
+  html.dark-mode body #layout-menu > #taskmenu .action-buttons a,
+  html.dark-mode body #layout-menu > #taskmenu a {
+    color: #c5d1d3;
+  }
+  html.dark-mode body #layout-menu > #taskmenu .action-buttons a:hover,
+  html.dark-mode body #layout-menu > #taskmenu a:hover {
+    color: #c5d1d3 !important;
+    background-color: rgb(19.7983193277%, 24.597911892%, 26.3977591036%) !important;
+  }
+  html.dark-mode body #layout-menu > #taskmenu .action-buttons a.selected,
+  html.dark-mode body #layout-menu > #taskmenu a.selected {
+    color: #c5d1d3;
+    background-color: var(--recia-primary-dark, #4d4d4d) !important;
   }
 }
 

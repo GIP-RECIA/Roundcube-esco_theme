@@ -1,7 +1,10 @@
-$netocentre: #24b2f3;
-$touraine: #C60440;
-$agricol: #2d8c17;
+@use 'sass:color';
+
 $headerSize: 68px;
+
+$color-dark-background: #21292c; // @color-dark-background
+$color-dark-border: #4d6066; // @color-dark-border
+$color-dark-font: #c5d1d3; // @color-dark-font
 
 body {
   margin-top: var(--recia-header-height, $headerSize);
@@ -58,7 +61,7 @@ body {
 
             &.selected {
               color: #333;
-              background-color: #d4d4d4 !important;
+              background-color: var(--recia-primary-light, #d4d4d4) !important;
             }
           }
         }
@@ -122,6 +125,68 @@ body {
       &:hover {
         > #esco-footer {
           transform: translateY(calc(100% - 10px));
+        }
+      }
+    }
+  }
+}
+
+.btn-primary:not(.btn-danger) {
+  background-color: var(--recia-primary, #37beff);
+  border-color: var(--recia-primary, #37beff);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
+    border-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
+  }
+}
+
+#messagestack .alert-info.information,
+.folderlist li.mailbox .unreadcount,
+.quota-widget .value {
+  background-color: var(--recia-primary, #37beff) !important;
+}
+
+html.dark-mode {
+  .btn-primary:not(.btn-danger) {
+    background-color: var(--recia-primary-dark, #37beff);
+    border-color: var(--recia-primary-dark, #37beff);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+      border-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    body > #layout > div > .header {
+      background-color: $color-dark-background;
+      border-top: 1px solid $color-dark-border;
+    }
+
+    body #layout-menu {
+      background-color: $color-dark-background !important;
+
+      > #taskmenu {
+        background: $color-dark-background;
+
+        .action-buttons a,
+        a {
+          color: $color-dark-font;
+
+          &:hover {
+            color: $color-dark-font !important;
+            background-color: color.adjust($color-dark-background, $lightness: 8%) !important;
+          }
+
+          &.selected {
+            color: $color-dark-font;
+            background-color: var(--recia-primary-dark, #4d4d4d) !important;
+          }
         }
       }
     }
