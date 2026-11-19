@@ -60,7 +60,7 @@ body {
             }
 
             &.selected {
-              color: #333;
+              color: #fff !important;
               background-color: var(--recia-primary-light, #d4d4d4) !important;
             }
           }
@@ -132,18 +132,20 @@ body {
 }
 
 .btn-primary:not(.btn-danger) {
-  background-color: var(--recia-primary, #37beff);
-  border-color: var(--recia-primary, #37beff);
+  background-color: var(--recia-btn-primary-bg, #1e1e1e);
+  border-color: var(--recia-btn-primary-bg, #1e1e1e);
+  color: var(--recia-btn-primary, #fff);
 
   &:hover,
   &:focus,
   &:active {
-    background-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
-    border-color: color-mix(in srgb, var(--recia-primary, #37beff) 85%, black);
+    background-color: var(--recia-btn-primary-pressed, #004584);
+    border-color: var(--recia-btn-primary-pressed, #004584);
+    color: var(--recia-btn-primary, #fff);
   }
 
   &:focus {
-    box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary, #37beff) 50%, transparent) !important;
+    box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-btn-primary-pressed, #004584) 50%, transparent) !important;
   }
 }
 
@@ -155,18 +157,20 @@ body {
 
 html.dark-mode {
   .btn-primary:not(.btn-danger) {
-    background-color: var(--recia-primary-dark, #37beff);
-    border-color: var(--recia-primary-dark, #37beff);
+    background-color: var(--recia-btn-primary-bg-dark, #fff);
+    border-color: var(--recia-btn-primary-bg-dark, #fff);
+    color: var(--recia-btn-primary-dark, #1e1e1e);
 
     &:hover,
     &:focus,
     &:active {
-      background-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
-      border-color: color-mix(in srgb, var(--recia-primary-dark, #37beff) 85%, black);
+      background-color: var(--recia-btn-primary-pressed-dark, #8ac7ff);
+      border-color: var(--recia-btn-primary-pressed-dark, #8ac7ff);
+      color: var(--recia-btn-primary-dark, #1e1e1e);
     }
 
     &:focus {
-      box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-primary-dark, #37beff) 50%, transparent) !important;
+      box-shadow: 0 0 0 .2rem color-mix(in srgb, var(--recia-btn-primary-pressed-dark, #8ac7ff) 50%, transparent) !important;
     }
   }
 
